@@ -1,0 +1,11 @@
+.buttonsContainer{
+    display:flex;
+    justify-content: flex-end;
+}
+.contentContainer{
+    display:flex;
+    flex-direction: column;
+}
+.borrarDatos{
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>{{data.accion}}</h1>
+<div mat-dialog-content class="contentContainer">
+
+  <ng-container *ngIf="data.accion!=='Borrar'">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="..." [formControl]="idFormControl" tabindex="-1" readonly>
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="..." [formControl]="nameFormControl" (keydown)="NoEspaciosPrimero($event);">
+      <mat-error *ngIf="nameFormControl.hasError('required')">
+        El nombre es requerido
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [formControl]="emailFormControl" placeholder="..." (keydown)="NoEspaciosPrimero($event);">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl" (keydown)="NoEspaciosPrimero($event);">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error *ngIf="passwordFormControl.hasError('required')">
+      La contraseña es requerida
+    </mat-error>
+  </mat-form-field>
+</ng-container>
+  
+  <p class="borrarDatos" *ngIf="data.accion==='Borrar'">
+    ¿Estás seguro de borrar el usuario?
+    <br>
+    Id: {{idFormControl.value}}
+    <br>
+    Name: {{nameFormControl.value}}
+    <br>
+    Email: {{emailFormControl.value}}
+  </p>
+
+</div>
+<div mat-dialog-actions class="buttonsContainer">
+  <button mat-button mat-dialog-close>Cerrar</button>
+  <button mat-raised-button color="primary" (click)="LlamarAccion();">{{data.accion}}</button>
+</div>

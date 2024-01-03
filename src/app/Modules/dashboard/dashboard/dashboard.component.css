@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+
+.menuContainer {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 50vh;
+}
+
+label {
+    font-size:large;
+}
+
+a {
+    margin-top:2%;
+    width: 30%;
+}
+
+.usuariosContainer{
+    text-align: center;
+}
