@@ -10,3 +10,7 @@
 
     -   Ya teniendo ya aplicación de NestJs y Angular corriendo puedes ir
         al navegador a la ruta http://localhost:4200/ y testearla.
+
+        El correo electronico y la contraseña fijos que establecí para iniciar sesión correctamente son:
+        Correo electronico: adm@outlook.com
+        Contraseña: 1
