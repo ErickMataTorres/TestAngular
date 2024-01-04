@@ -1,3 +1,4 @@
+// Importaciones necesarios para utilizar en el DashboardComponent
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

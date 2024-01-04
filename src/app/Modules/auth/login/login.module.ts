@@ -1,3 +1,5 @@
+// Modulo login en el cual se hacen las importaciones necesarias que se van a utilizar en el componente de LoginComponent
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

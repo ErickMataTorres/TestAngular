@@ -12,6 +12,7 @@ export class LoginService {
 
   constructor() { }
 
+    // Método para hacer la petición al backend NestJs enviando el email y el password para validar si son correctos o no
     Login(body:{email: string, password: string}): Observable<any>{
       return new Observable((observer)=>{
         axios.post(`${this.apiUrl}/auth/login`, body)

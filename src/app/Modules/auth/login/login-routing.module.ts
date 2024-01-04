@@ -1,3 +1,4 @@
+// En este archivo se establece la ruta para el LoginComponent
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Componente/login.component';

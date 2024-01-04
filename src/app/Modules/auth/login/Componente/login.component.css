@@ -1,3 +1,4 @@
+/* Estilos CSS para el posicionamiento y diseño de los elementos HTML */
 .contenedorPrincipal {
     display: grid;
     place-items: center;

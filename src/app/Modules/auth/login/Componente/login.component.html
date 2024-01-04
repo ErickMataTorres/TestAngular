@@ -1,12 +1,14 @@
+<!-- Html del componente login -->
 <div class="contenedorPrincipal">
 
   <div class="contenedorLogin">
 
     <h1>Iniciar sesión</h1>
 
+    <!-- Input del email con angular material para asegurarnos que se escriba un email válido -->
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
-      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" (keydown)="NoEspaciosEnBlanco($event);">
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="..." (keydown)="NoEspaciosEnBlanco($event);">
       <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
         Por favor ingresar un email válido
       </mat-error>
@@ -15,9 +17,10 @@
       </mat-error>
     </mat-form-field>
 
+    <!-- Input de angular material para escribir una contraseña -->
     <mat-form-field>
       <mat-label>Contraseña</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl" (keydown)="NoEspaciosEnBlanco($event);">
+      <input matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl" (keydown)="NoEspaciosEnBlanco($event);" placeholder="...">
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
         [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -31,6 +34,7 @@
       Correo o contraseña incorrecto
     </mat-error>
 
+    <!-- Botón para iniciar sesión -->
     <button mat-raised-button color="primary" class="botonSesion" (click)="IniciarSesion();">Iniciar sesión</button>
 
   </div>

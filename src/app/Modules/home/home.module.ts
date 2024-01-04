@@ -1,3 +1,4 @@
+// Importaciones necesarias para utilizar en el componente de Home
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

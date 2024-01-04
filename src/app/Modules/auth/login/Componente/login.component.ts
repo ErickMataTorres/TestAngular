@@ -18,12 +18,14 @@ export class LoginComponent {
     private router: Router
   ){}
 
+  // Validar que no se permitan espacion en el un input
   NoEspaciosEnBlanco(event: KeyboardEvent):void{
     if(event.code==="Space"){
       event.preventDefault();
     }
   }
 
+  // Validación de inicio de sesión, mostrando los mensajes emergentes para cada situación
   IniciarSesion():void{
     if(this.emailFormControl.value==="" || this.passwordFormControl.value === ""){
       this.emailFormControl.markAsTouched();

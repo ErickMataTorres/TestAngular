@@ -1,3 +1,4 @@
+// Se establece la ruta para HomeComponent
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Componente/home.component';
