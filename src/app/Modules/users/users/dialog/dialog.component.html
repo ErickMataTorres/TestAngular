@@ -10,7 +10,7 @@
     
     <mat-form-field class="example-full-width">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="..." [formControl]="nameFormControl" (keydown)="NoEspaciosPrimero($event);">
+      <input matInput placeholder="..." [formControl]="nameFormControl" (keydown)="NoEspaciosPrimero($event);" (keypress)="SoloLetras($event);">
       <mat-error *ngIf="nameFormControl.hasError('required')">
         El nombre es requerido
       </mat-error>

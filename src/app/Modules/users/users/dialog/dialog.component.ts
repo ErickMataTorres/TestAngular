@@ -42,6 +42,18 @@ export class DialogComponent{
       }
     }
   }
+  SoloLetras(event:KeyboardEvent):void{
+    const soloLetras = /^[a-zA-ZñÑáéíóú]+$/;
+    if ((event.target as HTMLInputElement).value === "") {
+        if (event.code === "Space") {
+            event.preventDefault();
+            return;
+        }
+    }
+    if (!soloLetras.test(event.key) && event.code !== "Space") {
+        event.preventDefault();
+    }
+  }
 
   LlamarAccion():void{
     if(this.nameFormControl.value===""||this.emailFormControl.value===""||this.passwordFormControl.value===""||this.emailFormControl.invalid){

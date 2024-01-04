@@ -46,7 +46,7 @@ export class UsersComponent {
       minWidth:"40%"
     });
     dialogRef.afterClosed().subscribe((result)=>{
-      if(result!==""){
+      if(result!==""&&result!==undefined){
         this.CargarPagina();
         this.MensajeRespuesta("background-color: #3f51b5; border: solid 1px darkblue; border-radius: 4px; color: white; padding: 1%;", "large", result);
       }

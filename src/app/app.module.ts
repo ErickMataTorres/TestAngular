@@ -10,6 +10,7 @@ import { UsersModule } from './Modules/users/users.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { HomeModule } from './Modules/home/home.module';
 
 const materialModules = [
   MatToolbarModule,
@@ -20,13 +21,14 @@ const materialModules = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     materialModules,
+    HomeModule,
     LoginModule,
     DashboardModule,
     UsersModule,

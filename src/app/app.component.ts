@@ -11,6 +11,10 @@ export class AppComponent{
     private router: Router
   ){}
   ValidarOpciones():boolean{
-    return this.router.url!=="/auth/login";
+    if(this.router.url!=="/auth/login" && this.router.url!=="/"){
+      return true;
+    }else{
+      return false;
+    }
   }
 }
